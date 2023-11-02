@@ -39,7 +39,7 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -169,28 +169,68 @@ footer {
 .search {
   display: flex;
   background-color: #fff;
-  border: 1px solid #ccc;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search > input {
-  border: none;
-  padding: 10px;
+  padding: 10px 30px;
   width: 250px;
+  border: none;
   border-radius: 25px 0 0 25px;
   outline: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .search > button {
-  background-color: #3498db;
+  background-color: #e3ab9a;
   color: #fff;
-  border: none;
   padding: 10px 20px;
   border-radius: 0 25px 25px 0;
 }
 
 .search > button:hover {
-  background-color: #2980b9;
+  background-color: #CC998A;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 70px;
+}
+
+.carousel-items {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  width: calc(33.33% - 20px);
+  padding: 10px;
+  margin: 10px;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: 210px;
+}
+
+.carousel-button {
+  background-color: transparent;
+}
+
+.carousel-button i {
+  font-size: 24px;
+  color: #e3ab9a;
+}
+
+.carousel-button:disabled i {
+  color: #ccc;
+  cursor: not-allowed;
 }
