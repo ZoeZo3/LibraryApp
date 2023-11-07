@@ -11,7 +11,7 @@ export default function Homepage() {
 
     function renderBooks(books) {
         const books_filtered = books.filter(book =>
-            book.volumeInfo.imageLinks && book.volumeInfo.authors
+            book.volumeInfo.imageLinks && book.volumeInfo.authors && book.saleInfo.saleability == "FOR_SALE"
             )
 
         const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,7 +34,9 @@ export default function Homepage() {
                     <div className="book-card-img">
                         <img src={book.volumeInfo.imageLinks.thumbnail} />
                     </div>
-                    <p><b>{book.volumeInfo.title}</b></p>
+                        <p className="book-card-title">
+                            <b>{book.volumeInfo.title}</b>
+                        </p>
                     <p><small>{book.volumeInfo.authors.join(', ')}</small></p>
                 </Link>
             )

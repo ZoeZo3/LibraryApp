@@ -13,12 +13,13 @@ export default function ListingPage() {
     function renderBooks(books) {
         const bookElements = books.map(book => {
             return (
-                book.volumeInfo.imageLinks && book.volumeInfo.description && book.volumeInfo.authors &&
+                book.volumeInfo.imageLinks && book.volumeInfo.authors &&
+                book.saleInfo.saleability == "FOR_SALE" &&
                 <Link className="book-card" key={book.id} to={book.id}>
                     <div className="book-card-img">
                         <img src={book.volumeInfo.imageLinks.thumbnail} />
                     </div>
-                    <p><b>{book.volumeInfo.title}</b></p>
+                    <p className="book-card-title"><b>{book.volumeInfo.title}</b></p>
                     <p><small>{book.volumeInfo.authors.join(', ')}</small></p>
                 </Link>
             )
