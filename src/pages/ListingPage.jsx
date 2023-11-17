@@ -20,7 +20,7 @@ export default function ListingPage() {
                         <img src={book.volumeInfo.imageLinks.thumbnail} />
                     </div>
                     <p className="book-card-title"><b>{book.volumeInfo.title}</b></p>
-                    <p><small>{book.volumeInfo.authors.join(', ')}</small></p>
+                    <p className="book-card-author"><small>{book.volumeInfo.authors.join(', ')}</small></p>
                 </Link>
             )
         })

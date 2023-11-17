@@ -59,7 +59,7 @@ export default function Homepage() {
 
     return (
         <div>
-            <h1>Newest books</h1>
+            <h1 className="homepage-title">Newest books</h1>
             <Suspense fallback={<h2 style={{ display: 'flex', marginTop: '60px'}}>Loading books...</h2>}>
                 <Await resolve={dataPromise.books}>
                     {renderBooks}
