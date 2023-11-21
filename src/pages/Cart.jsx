@@ -9,13 +9,14 @@ export default function Cart() {
     const [total, setTotal] = useState(0)
 
     const cart_items = cartItemsIds.map( id => {
-        return (
-        <CartItemCard
-            key = {id}
-            id = {id}
-            quantity = {cartItems[id]}
-        />)}
-    )
+        if (cartItems[id] > 0) {
+          return (<CartItemCard
+                key = {id}
+                id = {id}
+                quantity = {cartItems[id]}
+            />)
+        }       
+    }).filter(item => item !== undefined)
 
     return (
         <>
