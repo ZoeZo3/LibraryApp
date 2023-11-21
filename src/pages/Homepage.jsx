@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { useLoaderData, Link, Await } from "react-router-dom"
-import { getBooks } from "../../utils";
+import { getBooks } from "../../api";
 
 export async function loader() {
     return {books: await getBooks(undefined)} //, "newest"
@@ -13,7 +13,6 @@ export default function Homepage() {
         const books_filtered = books.filter(book =>
             book.volumeInfo.imageLinks && book.volumeInfo.authors && book.saleInfo.saleability == "FOR_SALE"
             )
-            console.log(books_filtered)
         const [currentIndex, setCurrentIndex] = useState(0);
         
         const handleNextClick = () => {

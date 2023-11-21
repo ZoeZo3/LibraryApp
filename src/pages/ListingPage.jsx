@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Link, useLoaderData, defer, Await } from 'react-router-dom';
-import { getBooks } from "../../utils";
+import { getBooks } from "../../api";
 
 export async function loader({ request }) {
     const searchTerm = new URL(request.url).searchParams.get("q")

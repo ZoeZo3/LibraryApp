@@ -27,5 +27,4 @@ export async function getBook(id) {
 
     const results = await response.json()
     return results
-
 }

@@ -1,6 +1,7 @@
 html {
   position: relative;
   min-height: 100%;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -42,6 +43,7 @@ body {
   background-color: #f9efe4;
   position: relative;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .site-wrapper {
@@ -93,9 +95,31 @@ button:hover {
   gap: 5%;
   background-color: #f9efe4;
   margin: 0px;
-  padding: 0.5% 15% 0.5% 8%;
+  padding: 0.5% 8%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+}
+
+.navbar-nav {
+  gap: 30px;
+}
+
+.header-cart {
+  position: relative;
+}
+.header-cart > div {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  background-color: #CC998A;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font-size: 0.8em;
 }
 
 .site-logo {
@@ -148,6 +172,10 @@ button {
 .search > button:active {
   background-color: #CC998A;
   border: solid #CC998A;
+}
+
+.cart-logo {
+  max-width: 50%;
 }
 
 /* resize navbar on medium screens */
@@ -330,4 +358,87 @@ footer {
 
 .add-to-cart:active {
   background-color: #698c6c;
+}
+
+.cart {
+  margin: 3%;
+}
+
+.cart > h1 {
+  margin: 0% 10%;
+}
+
+.cart-items {
+  margin: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.book-cart-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.book-cart-image {
+  max-height: 100px;
+}
+
+.book-cart-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 90%;
+}
+
+.book-cart-title {
+  width: 40%;
+}
+
+.book-cart-title > .title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+}
+
+.book-cart-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.book-cart-price, .book-cart-subtotal {
+  width: 20%;
+}
+
+.book-cart-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+  min-width: 180px;
+  flex-basis: fit-content;
+}
+
+@media all and (max-width: 930px) {
+  .cart-header, .book-cart-price {
+    display: none;
+  }
+  .book-cart-quantity {
+    justify-content: flex-start;
+  }
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  font-weight: 700;
 }
