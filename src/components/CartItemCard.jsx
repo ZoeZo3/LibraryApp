@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext} from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { NavLink } from "react-router-dom"
 import { getBook } from '../../api'
 import { ShopContext } from '../context/ShopContext'
 
@@ -25,7 +26,9 @@ export default function CartItemCard(props) {
         <section>
             {book && (
                 <div className='book-cart-item'>
-                    <img className='book-cart-image' src={book.volumeInfo.imageLinks.thumbnail}></img>
+                    <NavLink to={`/books/${props.id}`}>
+                        <img className='book-cart-image' src={book.volumeInfo.imageLinks.thumbnail}></img>
+                    </NavLink>
                     <div className='book-cart-info'>
                         <div className='book-cart-title'>
                             <div className='title'>{book.volumeInfo.title}</div>

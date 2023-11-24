@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Form, NavLink, redirect } from "react-router-dom"
 import { ShopContext } from '../context/ShopContext'
-
+import SearchIcon from '@mui/icons-material/Search'
 
 export async function action({ request }) {
     const searchData = await request.formData()
@@ -27,12 +27,12 @@ const NavBar = () => {
                             type="search-term"
                             placeholder="Search for a book"
                         />
-                        <button>Search</button>
+                        <button><SearchIcon /></button>
                     </Form>
                 
                     <NavLink to="/cart" className="nav-link header-cart">
                         <img src="/assets/cart.png" alt="cart" className="cart-logo" />
-                        <div>{nbItems}</div>
+                        <span>{nbItems}</span>
                     </NavLink>
                 </Nav>
             </Navbar.Collapse>

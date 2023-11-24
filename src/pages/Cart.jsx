@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
-import CartItemCard from '../components/CartItem'
+import CartItemCard from '../components/CartItemCard'
 
 
 export default function Cart() {

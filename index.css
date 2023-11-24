@@ -101,24 +101,26 @@ button:hover {
 }
 
 .navbar-nav {
-  gap: 30px;
+  gap: 3em;
 }
 
 .header-cart {
   position: relative;
 }
-.header-cart > div {
+
+.header-cart > span {
   position: absolute;
-  top: 0;
-  left: 25px;
+  top: -0.3em;
+  left: 1.8em;
   background-color: #CC998A;
+  color: #f6e1da;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 1.5em;
+  height: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 1em;
   font-size: 0.8em;
 }
 
@@ -162,24 +164,18 @@ button {
   color: #fff;
   border-radius: 0 25px 25px 0;
   border: solid #e3ab9a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.search > button:hover {
+.search > button:hover, .search > button:active  {
   background-color: #CC998A;
   border: solid #CC998A;
-}
-
-.search > button:active {
-  background-color: #CC998A;
-  border: solid #CC998A;
-}
-
-.cart-logo {
-  max-width: 50%;
 }
 
 /* resize navbar on medium screens */
-@media all and (max-width: 800px) {
+@media all and (max-width: 1000px) {
   .search {
     max-width: 58%;
   }
@@ -187,14 +183,28 @@ button {
     gap: 3px;
   }
   .search > input {
-    padding: 10px 10px;
-    width: 60%;
+    width: 80%;
   }
 
   .search > button {
-    padding: 10px 10px;
-    width: 40%;
+    width: 20%;
   }
+
+  .header-cart > span {
+    left: 1.1em;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 1em;
+  }
+}
+
+.cart-logo {
+  width: 1.9em;
+  height: 1.9em;
 }
 
 footer {
@@ -277,6 +287,10 @@ footer {
 .book-image {
   width: 30%;
   height: auto;
+}
+
+.book-image > img {
+  max-width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
@@ -354,6 +368,11 @@ footer {
   background-color: #8bc391;
   color: white;
   max-width: fit-content;
+}
+
+.add-to-cart > span {
+  margin-left: 0.5em;
+
 }
 
 .add-to-cart:active {
